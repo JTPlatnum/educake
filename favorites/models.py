@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Favorites(models.Model):
+    user_id = models.ForeignKey(Users)
+    program_id = models.ForeignKey(degree_subject)
+    created_at = models.DateTimeField('date created at')
+

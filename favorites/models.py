@@ -7,5 +7,5 @@ class Favorites(models.Model):
     created_at = models.DateTimeField('date created at')
     updated_at = models.DateTimeField('date updated at')
     def __unicode__(self):
-        return "%d" %self.id
+        return "user_id: %d and program_id: %d" %(self.user_id, self.program_id)
     

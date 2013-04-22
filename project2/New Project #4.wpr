@@ -1,0 +1,29 @@
+#!wing
+#!version=4.0
+##################################################################
+# Wing IDE project file                                          #
+##################################################################
+[project attributes]
+proj.directory-list = [{'dirloc': loc('..'),
+                        'excludes': [u'search',
+                                     u'project2/urls.py',
+                                     u'project2/__init__.py',
+                                     u'project2/settings.py',
+                                     u'mockups',
+                                     u'project2/wsgi.py'],
+                        'filter': '*',
+                        'include_hidden': False,
+                        'recursive': True,
+                        'watch_for_changes': True},
+                       {'dirloc': loc('../search'),
+                        'excludes': (),
+                        'filter': '*',
+                        'include_hidden': False,
+                        'recursive': True,
+                        'watch_for_changes': True}]
+proj.file-list = [loc('settings.py'),
+                  loc('urls.py'),
+                  loc('wsgi.py'),
+                  loc('__init__.py')]
+proj.file-type = 'shared'
+proj.main-file = loc('../manage.py')

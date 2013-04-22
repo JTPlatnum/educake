@@ -6,4 +6,6 @@ class Favorites(models.Model):
     program_id = models.IntegerField()
     created_at = models.DateTimeField('date created at')
     updated_at = models.DateTimeField('date updated at')
-
+    def __unicode__(self):
+        return "%d" %self.id
+    

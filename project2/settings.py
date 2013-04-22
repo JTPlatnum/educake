@@ -16,9 +16,9 @@ DATABASES = {
         'NAME': 'educakedb',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '8889',                      # Set to empty string for default.
+        'PORT': '',                      # Set to empty string for default.
     }
 }
 
@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'favorites',
+    'search',
 )
 
 # A sample logging configuration. The only tangible logging

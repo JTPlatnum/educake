@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% static "project2/bootstrap.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "project2/site_styles.css" %}" />
+        <link rel="stylesheet" type="text/css" href="{% static "project2/font-awesome.min.css" %}" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="{% static "project2/script.js" %}"></script>
+</head>
+<body>
+	{% block content %}{% endblock %}
+</body>
+</html>

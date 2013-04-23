@@ -1,0 +1,12 @@
+{% extends "project2/base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<ul>
+    <li><a href="{% url "search:guest_search" %}">Search as guest</a></li>
+    <li><a href="{% url "search:user_search" %}">Search as loggged in user</a></li>
+</ul>
+
+{% endblock %}

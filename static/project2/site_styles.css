@@ -1,0 +1,55 @@
+.clear-both{
+    clear:both;
+}
+
+.clear-left{
+    clear:left;
+}
+
+.clear-right{
+    clear:right;
+}
+
+.width-auto{
+    width:auto;
+}
+
+.height-auto{
+    height:auto;
+}
+
+.wrapper{
+    width:1400px;
+    min-height: 50px;
+    height: auto;
+    margin:auto;
+}
+
+#results-box{
+    margin:20px auto;
+}
+
+#accordion label{
+    margin-left:20px;    
+}
+
+label{
+    width: 100px;
+}
+
+.favorites-icon{
+    font-size: 30px;
+}
+
+.favorites-icon:hover{
+    color:orange;
+    cursor: pointer;
+}
+
+.icon-area{
+    padding-top: 12px;
+}
+
+.selected{
+    color: orange;
+}

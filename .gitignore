@@ -1,2 +1,6 @@
 favorites/models.pyc
 project2/settings.pyc
+project2/views.pyc
+search/models.pyc
+search/urls.pyc
+search/views.pyc

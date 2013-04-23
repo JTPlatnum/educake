@@ -3,4 +3,8 @@ from search.models import Degree_Level, Degree_Subject, Schools, Programs
 from django.shortcuts import render, get_object_or_404
 
 def home(request):
-    return HttpResponse("Welcome to Educake <br> <a href=''>To regular search<a>")
+    return render(request, 'project2/home.html')
+
+def login(request):
+    return render(request, 'project2/login.html')
+

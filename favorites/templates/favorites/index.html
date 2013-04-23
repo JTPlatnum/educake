@@ -1,0 +1,9 @@
+{% if latest_favorites_list %}
+    <ul>
+    {% for favorites in latest_favorites_list %}
+        <li><a href="/favorites/{{ favorites.id }}/">{{ favorites.id }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No favorites are available.</p>
+{% endif %}

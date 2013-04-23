@@ -1,0 +1,72 @@
+{% extends "project2/base.html" %}
+
+{% block title %}Guest Search{% endblock %}
+
+{% block content %}
+
+
+<div class="wrapper">
+    <div class="pull-left width-auto">
+        <h1>Educake</h1>
+        <h3>Welcome, <a href="">SoAndSo</a></h3> 
+        <form action="" method="post">
+            <div id="accordion">
+                <h4>Degree Type</h4>
+                <div>
+                    <input type="radio" name="degree_levels" value="certificate" id="certificate" class="pull-left"/><label for="certificate" >Certificate</label>
+                    <input type="radio" name="degree_levels" value="certificate" id="bachelors" class="pull-left"/><label for="certificate">Bachelors</label>
+                    <input type="radio" name="degree_levels" value="certificate" id="graduate" class="pull-left"/><label for="certificate">Graduate</label>
+                    <input type="radio" name="degree_levels" value="certificate" id="masters" class="pull-left"/><label for="certificate">Masters</label>
+                    <input type="radio" name="degree_levels" value="certificate" id="doctorate" class="pull-left"><label for="certificate">Doctorate</label>
+                </div>
+                <h4>Cost</h4>
+                <div>
+                    <p><input type="radio"/></p>
+                </div>
+                <h4>School</h4>
+                <div>
+                    <p><input type="radio"/></p>
+                </div>
+                <h4>Class Type</h4>
+                <div>
+                    <p><input type="radio"/></p>
+                </div>
+                <h4>Start Date</h4>
+                <div>
+                    <p><input type="radio"/></p>
+                </div>
+            </div>
+            <input type="submit" value="Update"/>
+        </form>
+    </div>
+    <div class="container">
+        <h2 class="pull-right">Find the perfect program.  At the perfect school</h2>
+        <form action="" class="navbar-search pull-right">
+            <input type="text" class="search-query" placeholder="What" />
+            <input type="text" class="search-query" placeholder="Where" />
+            <input type="submit" value="Find Schools"/>
+        </form>
+        <div class="clear-right"></div>
+        <div id="results-box" class="">
+            <h3 class="pull-left"><a href="">Program Name</a></h3>
+            <div class="rating icon-area pull-right">
+                <span class="icon-star-empty favorites-icon"></span>
+            </div>
+            <h3 class="pull-right">School - City, State</h3>
+            <p class="clear-right">vi;jain asdn iaonasdnasinf ann f;asnf ;winf  sf nv ijs b iybaygfygsadfyugsy  sfyigsa fosayisygdfysgysggsyisgfoiysgafioysgfygs fyigsdy sdgf sydgfyisadgysgdfgsd</p>
+            <div class="pagination">
+              <ul>
+                <li><a href="#">Prev</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">Next</a></li>
+              </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

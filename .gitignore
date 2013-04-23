@@ -1,6 +1,9 @@
 favorites/models.pyc
-<<<<<<< HEAD
 project2/settings.pyc
-=======
 project2/settings.pyc
->>>>>>> bca07ca2855a62878d7a0ba50f53df8901c5c19b
+project2/views.pyc
+search/models.pyc
+search/urls.pyc
+search/views.pyc
+
+

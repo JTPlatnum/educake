@@ -27,6 +27,7 @@ class Programs(models.Model):
     school = models.ForeignKey(Schools)
     degree_level = models.ForeignKey(Degree_Level)
     degree_subject = models.ForeignKey(Degree_Subject)
+    degree_level = models.ForeignKey(Degree_Level)
     name = models.CharField(max_length = 200)
     description = models.TextField()
     cost = models.IntegerField()

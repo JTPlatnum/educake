@@ -6,6 +6,6 @@ from search import views
 # admin.autodiscover()
 
 urlpatterns = patterns('',                
-    url(r'^$', 'views.new', name='guest_search'),
-    
+    url(r'^$', views.guest, name='guest_search'),
+    url(r'^user/$', views.user, name='user_search'),
     )

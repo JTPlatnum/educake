@@ -27,10 +27,10 @@ def login(request):
             return HttpResponse("Please enter your email and password")
         
 def register(request):
-    post_email = request.POST['reg_email']
-    post_username = request.POST['reg_username']
-    post_password = request.POST['reg_password']
-    post_first_name = request.POST['reg_first_name']
-    post_last_name = request.POST['reg_last_name']
+#    post_email = request.POST['reg_email']
+#    post_username = request.POST['reg_username']
+#    post_password = request.POST['reg_password']
+#    post_first_name = request.POST['reg_first_name']
+#    post_last_name = request.POST['reg_last_name']
     return HttpResponse(request.POST)
 

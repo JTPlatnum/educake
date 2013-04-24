@@ -1,7 +1,21 @@
+favorites/__init__.pyc
+favorites/admin.pyc
 favorites/models.pyc
+favorites/models.pyc.orig
+favorites/urls.pyc
+favorites/views.pyc
+project2/__init__.pyc
+project2/New Project #2.wpr
+project2/New Project #2.wpu
+project2/New Project #4.wpr
+project2/New Project #4.wpu
 project2/settings.pyc
-project2/settings.pyc
+project2/settings.pyc.orig
+project2/urls.pyc
 project2/views.pyc
+project2/wsgi.pyc
+search/__init__.pyc
+search/admin.pyc
 search/models.pyc
 search/urls.pyc
 search/views.pyc

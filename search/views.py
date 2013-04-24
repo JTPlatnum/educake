@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 # from django.core.urlresolvers import reverse
 
 def guest(request):
-    return render(request, "search/guest.html")
+    return render(request, "search/search.html")
 
 def user(request):
     return render(request, "search/user.html")

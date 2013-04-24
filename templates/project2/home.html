@@ -1,1 +1,19 @@
-Educats search page form
+{% extends "project2/base.html" %}
+
+{% block title %}Landing Page Search{% endblock %}
+
+{% block content %}
+
+<div class="search_land">
+ <h2 class="pull-left clear-left">Find the perfect program.  At the perfect school</h2><br>
+    <form action="" class="navbar-search clear-left pull-left"><br>
+        <input type="text" class="search-query" placeholder="What" />
+        <input type="text" class="search-query" placeholder="Where" />
+        <input type="submit" value="Find Schools"/>
+    </form>
+</div>
+<div class="auth_page">
+    <h4 class="pull-left clear-left"><a href="/start/">Login or Register!</a></h4>
+<div>
+        
+{% endblock %} 

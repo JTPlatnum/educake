@@ -1,4 +1,15 @@
 $(document).ready(function(){
+      $(function() {
+    $( "#accordion" ).accordion({
+        collapsible: true
+      });
+    });
+    
+    $('.checkbox').buttonset()
+//    $('.checkbox').buttonset()
+
+    
+    $('.button').button()
     
     $(".favorites-icon").click(function(){
         icon = $(this)

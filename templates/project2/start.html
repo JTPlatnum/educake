@@ -4,30 +4,43 @@
 
 {% block content %}
 
- <h2 class="pull-left">Login</h2>
-    <form action="{% url 'login' %}" class="clear-left pull-left" method="post">
-        {% csrf_token %}
-        <input type="text" class="text" placeholder="Email" name="log_email"/><br>
-        <input type="password" class="password" placeholder="Password" name="log_password"/><br>
-        <input type="submit" value="Login"/><br>
-    </form><br>
-        
-<h2 class="clear-left">OR</h2><br>
-    
-<h2 class="pull-left">Register (to save your favorites)</h2>
-    <form action="{%url 'register' %}" class="clear-left pull-left" method="post">
-        {% csrf_token %}
-        <input type="text" class="text" name="email" placeholder="Email" name="reg_email"/><br>
-        <input type="text" class="text" name="username" placeholder="Username" name="reg_username"/><br>
-        <input type="password" class="password" placeholder="Password" name="reg_password"/><br>
-        <input type="password" class="password" placeholder="Confirm Password" /><br>
-        <input type="text" class="text" name="first_name" placeholder="First Name" name="reg_first_name"/><br>
-        <input type="text" class="text" name="last_name" placeholder="Last Name" name="reg_last_name"/><br>
-        <input type="submit" value="Create Account"/><br>
-    </form>
+<div class="span8 offset4">
+    <h2 class="pull-left">Login</h2>
+       <form action="{% url 'login' %}" class="clear-left pull-left" method="post">
+           {% csrf_token %}
+           <input type="text" class="text" placeholder="Email" name="log_email"/><br>
+           <input type="password" class="password" placeholder="Password" name="log_password"/><br>
+           <input type="submit" value="Login"/><br>
+       </form><br>
+    {% if e %}
+         {% for error in e %}
+            <p>{{error}}</p>
+         {% endfor %}
+    {% endif %}
 
-<div class="auth_page">
-    <h4 class="pull-left clear-left"><a href="/search/">Nevermind...Skip this!</a></h4>
-<div>
+   <h2 class="clear-left">OR</h2>
+    {% if msg %}
+            <p>{{msg}}</p>
+    {% endif %}
+    <br>
+
+   <h2 class="pull-left">Register (to save your favorites)</h2>
+       <form action="{%url 'register' %}" class="clear-left pull-left" method="post">
+           {% csrf_token %}
+           <input type="text" class="text" placeholder="Email" name="reg_email"/><br>
+           <input type="text" class="text" placeholder="Username" name="reg_username"/><br>
+           <input type="password" class="password" placeholder="Password" name="reg_password"/><br>
+           <input type="password" class="password" placeholder="Confirm Password" name="conf_reg_password"/><br>
+           <input type="text" class="text" placeholder="First Name" name="reg_first_name"/><br>
+           <input type="text" class="text" placeholder="Last Name" name="reg_last_name"/><br>
+           <input type="submit" value="Create Account"/><br>
+       </form>
+    
+
+   
+   <div class="auth_page">
+       <h4 class="pull-left clear-left"><a href="/search/">Nevermind...Skip this!</a></h4>
+</div>
+</div>
 
 {% endblock %} 

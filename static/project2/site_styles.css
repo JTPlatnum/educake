@@ -19,7 +19,7 @@
 }
 
 .wrapper{
-    width:1400px;
+    width:1500px;
     min-height: 50px;
     height: auto;
     margin:auto;
@@ -29,12 +29,22 @@
     margin:20px auto;
 }
 
-#accordion label{
-    margin-left:20px;    
+#accordion{
+    margin-bottom: 5px;
+    width: 250px;
 }
 
-label{
-    width: 100px;
+    #accordion label{
+        width: 150px;    
+    }
+
+    #accordion h4:hover{
+        cursor: pointer;
+    }
+
+select{
+    width: 200px;
+    margin-top: 10px;
 }
 
 .favorites-icon{
@@ -52,4 +62,8 @@ label{
 
 .selected{
     color: orange;
+}
+
+#filter{
+    width:200px;
 }

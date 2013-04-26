@@ -27,3 +27,4 @@ proj.file-list = [loc('settings.py'),
                   loc('__init__.py')]
 proj.file-type = 'shared'
 proj.main-file = loc('../manage.py')
+testing.test-framework = {loc('../manage.py'): ':internal djangotest'}

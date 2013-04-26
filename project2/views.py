@@ -1,7 +1,9 @@
-from django.http import HttpResponse, HttpResponseRedirect
-from search.models import Degree_Level, Degree_Subject, Schools, Programs
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
+from search import search_helpers
 
+def home(request):  
+    data = {"STATES": search_helpers.STATES}
+    return render(request, "project2/home.html", data)
 
-def home(request):
-    return render(request, "project2/welcome.html")
+def start(request):  
+    return render(request, "project2/start.html")

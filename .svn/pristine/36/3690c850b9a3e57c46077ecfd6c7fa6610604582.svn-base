@@ -1,0 +1,11 @@
+{% extends "project2/base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<ul>
+    <li><a href="{% url "search:search" %}">Search</a></li>
+</ul>
+
+{% endblock %}

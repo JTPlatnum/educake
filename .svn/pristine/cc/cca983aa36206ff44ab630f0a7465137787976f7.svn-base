@@ -1,0 +1,63 @@
+.clear-both{
+    clear:both;
+}
+
+.clear-left{
+    clear:left;
+}
+
+.clear-right{
+    clear:right;
+}
+
+.width-auto{
+    width:auto;
+}
+
+.height-auto{
+    height:auto;
+}
+
+.wrapper{
+    width:1400px;
+    min-height: 50px;
+    height: auto;
+    margin:auto;
+}
+
+#results-box{
+    margin:20px auto;
+}
+
+#accordion{
+    margin-bottom: 5px;
+}
+
+    #accordion label{
+        width: 150px;    
+    }
+
+    #accordion h4:hover{
+        cursor: pointer;
+    }
+
+.favorites-icon{
+    font-size: 30px;
+}
+
+.favorites-icon:hover{
+    color:orange;
+    cursor: pointer;
+}
+
+.icon-area{
+    padding-top: 12px;
+}
+
+.selected{
+    color: orange;
+}
+
+#filter{
+    width:200px;
+}

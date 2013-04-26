@@ -1,0 +1,27 @@
+{% extends "project2/base.html" %}
+
+{% block title %}Landing Page Search{% endblock %}
+
+{% block content %}
+
+<div class="span10 offset2">
+ <h2 class="pull-left clear-left">Find the perfect program.  At the perfect school</h2><br>
+</div> 
+<div class="search_land span10 offset3">
+    <form action="{% url "search:search" %}" method="POST" class="navbar-search clear-left pull-left">
+    {% csrf_token %}
+        <input type="text" name="program" class="search-query" placeholder="Program" />
+        <input type="text" name="city" class="search-query" placeholder="City" />
+        <select name="states">
+            {% for state in STATES %}
+                <option value="{{state}}">{{state}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Find Schools"/>
+    </form>
+</div>
+<div class="auth_page span3 offset9">
+    <h4 class="pull-left clear-left"><a href="{% url "start" %}">Login or Register!</a></h4>
+<div>
+        
+{% endblock %} 

@@ -122,17 +122,17 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'favorites',
+    'search',    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    # 'django.contrib.sites',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'favorites',
-    'search',
 )
 
 # A sample logging configuration. The only tangible logging

@@ -10,6 +10,7 @@
            {% csrf_token %}
            <input type="text" class="text" placeholder="Email" name="log_email"/><br>
            <input type="password" class="password" placeholder="Password" name="log_password"/><br>
+<<<<<<< HEAD
            <input type="submit" value="Login" class="button"/><br>
        </form><br>
        
@@ -22,6 +23,19 @@
    <h2 class="clear-left">OR</h2>
     {% if msg %}
             <p class="alert-info">{{msg}}</p>
+=======
+           <input type="submit" value="Login"/><br>
+       </form><br>
+    {% if e %}
+         {% for error in e %}
+            <p>{{error}}</p>
+         {% endfor %}
+    {% endif %}
+
+   <h2 class="clear-left">OR</h2>
+    {% if msg %}
+            <p>{{msg}}</p>
+>>>>>>> f4a498fb0ad936ded03e14a7ac1047f24d30eb57
     {% endif %}
     <br>
 
@@ -34,6 +48,7 @@
            <input type="password" class="password" placeholder="Confirm Password" name="conf_reg_password"/><br>
            <input type="text" class="text" placeholder="First Name" name="reg_first_name"/><br>
            <input type="text" class="text" placeholder="Last Name" name="reg_last_name"/><br>
+<<<<<<< HEAD
            <input type="submit" value="Register" class="button"/><br>
        </form>
 <div class="clear-both"></div>       
@@ -42,6 +57,11 @@
             <p class="alert-danger">{{error}}</p>
          {% endfor %}
     {% endif %}
+=======
+           <input type="submit" value="Create Account"/><br>
+       </form>
+    
+>>>>>>> f4a498fb0ad936ded03e14a7ac1047f24d30eb57
 
    
    <div class="auth_page">

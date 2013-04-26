@@ -1,0 +1,23 @@
+from django.http import HttpResponse, HttpResponseRedirect
+from search.models import Degree_Level, Degree_Subject, Schools, Programs
+from django.shortcuts import render, get_object_or_404
+# from django.core.urlresolvers import reverse
+
+def index(request):
+    degree_levels = Degree_Level.objects.all()
+    programs_all = Programs.objects.all()
+    programs = {}
+    for program in programs_all:
+        programs['program'] = program
+        programs['school'] = Schools.objects.get(id = program.school_id)
+        
+    pass_data = {"degree_levels": degree_levels, "programs": programs}
+    return render(request, "search/search.html", pass_data)
+
+#index
+#new
+#create
+#show
+#edit
+#update
+#destroy

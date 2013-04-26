@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.http import HttpResponse, HttpResponseRedirect
 from search.models import Degree_Level, Degree_Subject, Schools, Programs
 from django.shortcuts import render, get_object_or_404
@@ -6,6 +5,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 import search
 from django.core.validators import validate_email
+from django.shortcuts import render
+from search import search_helpers
 
 def home(request):
     return render(request, 'project2/home.html')
@@ -67,9 +68,6 @@ def register(request):
         e_r.append("Please fill in all fields to register.")
         pass_data = {'e_r':e_r}
         return render(request, 'project2/start.html', pass_data)
-=======
-from django.shortcuts import render
-from search import search_helpers
 
 def home(request):  
     data = {"STATES": search_helpers.STATES}
@@ -77,4 +75,4 @@ def home(request):
 
 def start(request):  
     return render(request, "project2/start.html")
->>>>>>> f4a498fb0ad936ded03e14a7ac1047f24d30eb57
+

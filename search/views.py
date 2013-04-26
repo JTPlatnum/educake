@@ -3,19 +3,6 @@ from search.models import Degree_Level, Degree_Subject, Schools, Programs
 from django.shortcuts import render, get_object_or_404
 import search_helpers
 
-<<<<<<< HEAD
-def index(request):
-    degree_levels = Degree_Level.objects.all()
-    degree_subjects = Degree_Subject.objects.all()
-    schools_all = Schools.objects.all()
-    schools = []
-    for school in schools_all:
-        schools.append(school.name)
-        
-    programs_all = Programs.objects.all()
-    programs = []
-    for program in programs_all:
-=======
 # from django.core.urlresolvers import reverse
 
 def index(request):
@@ -52,7 +39,6 @@ def index(request):
                     
     programs = []        
     for program in program_matches:
->>>>>>> f4a498fb0ad936ded03e14a7ac1047f24d30eb57
         school = Schools.objects.get(id = program.school_id)
         data = {}
         data["p_name"] = program.name
@@ -63,19 +49,13 @@ def index(request):
         programs.append(data)
     
     pass_data = {
-<<<<<<< HEAD
-=======
         "STATES": search_helpers.STATES,
->>>>>>> f4a498fb0ad936ded03e14a7ac1047f24d30eb57
         "degree_levels": degree_levels,
         "degree_subjects": degree_subjects,
         "schools": schools,
         "programs": programs
     }
     
-<<<<<<< HEAD
-    return render(request, "search/search.html", pass_data)
-=======
     request.session['current_results'] = programs
     
     return render(request, "search/search.html", pass_data)
@@ -129,4 +109,4 @@ def filter(request):
     }        
     
     return render(request, "search/search.html", pass_data)
->>>>>>> f4a498fb0ad936ded03e14a7ac1047f24d30eb57
+

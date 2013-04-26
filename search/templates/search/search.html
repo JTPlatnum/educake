@@ -1,66 +1,3 @@
-<<<<<<< HEAD
-{% extends "project2/base.html" %}
-
-{% block title %}Guest Search{% endblock %}
-
-{% block content %}
-
-<div class="wrapper">
-    <div id="filter" class="pull-left width-auto">
-        <h1>Educake</h1>
-        <h4>Welcome, <a href="">SoAndSo</a></h4> 
-        <form action="" method="post">
-            <div id="accordion">
-                <h4>Degree Type</h4>
-                <div class="height-auto">
-                    <div class="checkbox">
-                        {% for level in degree_levels %}
-                        <input type="checkbox" name="degree_levels" id="{{level.name}}" value="{{level.name}}" class="pull-left"/><label for="{{level.name}}" >{{level.name}}</label>
-                        {% endfor %}                    
-                    </div>
-                </div>               
-                <h4>School</h4>
-                <div class="height-auto">
-                    <div class="checkbox">
-                        {% for name in schools %}
-                        <input type="checkbox" name="schools" id="{{name}}" value="{{name}}" class="pull-left"/><label for="{{name}}" >{{name}}</label>
-                        {% endfor %}                    
-                    </div>    
-                </div>
-                <h4>Subject</h4>
-                <div>
-                    <div class="checkbox">
-                        {% for subject in degree_subjects %}
-                        <input type="checkbox" name="{{subject.name}}" id="{{subject.name}}" value="{{subject.name}}" class="pull-left"/><label for="{{subject.name}}" >{{subject.name}}</label>
-                        {% endfor %}                    
-                    </div>
-                </div>
-            </div>
-            <input type="submit" value="Update" class="button"/>
-        </form>
-    </div>
-    <div class="container">
-        <h2 class="pull-right">Find the perfect program.  At the perfect school</h2>
-        <form action="" class="navbar-search pull-right">
-            <input type="text" class="search-query" placeholder="What" />
-            <input type="text" class="search-query" placeholder="Where" />
-            <input type="submit" value="Find Schools" class="button" />
-        </form>
-        <div class="clear-right"></div>
-        <div id="results-box" class="">
-            {% for item in programs %}
-                <h3 class="pull-left"><a href="">{{ item.p_name }}</a></h3>
-                <div class="rating icon-area pull-right">
-                    <span class="icon-star-empty favorites-icon"></span>
-                </div>
-                <h3 class="pull-right">{{ item.s_name }} {{" - "}} {{item.s_city}} {{", "}} {{item.s_state}}</h3>
-                <p class="clear-right">{{ item.p_description }}</p>
-            {% endfor %}
-        </div>
-
-    </div>
-</div>
-=======
 {% extends "project2/base.html" %}
 
 {% block title %}Guest Search{% endblock %}
@@ -129,5 +66,4 @@
 
     </div>
 </div>
->>>>>>> f4a498fb0ad936ded03e14a7ac1047f24d30eb57
 {% endblock %}

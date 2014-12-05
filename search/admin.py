@@ -14,7 +14,7 @@ class Degree_Subject_Admin(admin.ModelAdmin):
 admin.site.register(Degree_Subject, Degree_Subject_Admin)
 
 class Schools_Admin(admin.ModelAdmin):
-    fields = ['name', 'description', 'city', 'state', 'created_at', 'updated_at']
+    fields = ['name', 'description', 'city', 'state']
 admin.site.register(Schools, Schools_Admin)
 
 """admin.site.register(Schools)

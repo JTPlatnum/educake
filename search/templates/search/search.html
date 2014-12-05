@@ -6,8 +6,8 @@
 
 <div class="wrapper">
     <div id="filter" class="pull-left width-auto">
-        <h1>Educake</h1>
-        <h4>Welcome, <a href="">SoAndSo</a></h4> 
+        <h1>Educake!</h1>
+        <h4>Welcome<a href=""></a> ! </h4> 
         <form action="{% url "search:filter" %}" method="post">
         {% csrf_token %}
             <div id="accordion">
@@ -40,7 +40,7 @@
         </form>
     </div>
     <div class="container">
-        <h2 class="pull-right">Find the perfect program.  At the perfect school</h2>
+        <h3 class="pull-right">Find the perfect educational program. It's as easy as pie.</h3>
         <form action="{% url "search:search" %}" class="navbar-search pull-right" method="POST">
             {% csrf_token %}
             <input type="text" name="program" class="search-query" placeholder="Program" />
@@ -55,7 +55,7 @@
         <div class="clear-right"></div>
         <div id="results-box" class="">
             {% for item in programs %}
-                <h3 class="pull-left"><a href="">{{ item.p_name }}</a></h3>
+                <h3 class="pull-left"><a href="{{item.p_link}}" target="_blank">{{ item.p_name }}</a></h3>
                 <div class="rating icon-area pull-right">
                     <span class="icon-star-empty favorites-icon"></span>
                 </div>

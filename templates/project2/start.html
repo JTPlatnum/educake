@@ -34,15 +34,15 @@
            <input type="password" class="password" placeholder="Confirm Password" name="conf_reg_password"/><br>
            <input type="text" class="text" placeholder="First Name" name="reg_first_name"/><br>
            <input type="text" class="text" placeholder="Last Name" name="reg_last_name"/><br>
-           <input type="submit" value="Register" class="button"/><br>
-       </form>
+<!--            <input type="submit" value="Register" class="button"/><br>
+       </form> -->
 <div class="clear-both"></div>       
     {% if e_r %}
          {% for error in e_r %}
             <p class="alert-danger">{{error}}</p>
          {% endfor %}
     {% endif %}
-           <input type="submit" value="Create Account"/><br>
+           <input type="submit" value="Register" class="button"/><br>
        </form>
        
    <div class="auth_page">

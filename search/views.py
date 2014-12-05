@@ -43,6 +43,9 @@ def index(request):
         data = {}
         data["p_name"] = program.name
         data["p_description"] = program.description
+        data["p_id"] = program.id
+        data["p_link"] = program.link
+        data["s_id"] = school.id
         data["s_name"] = school.name
         data["s_city"] = school.city
         data["s_state"] = school.state
@@ -65,7 +68,7 @@ def filter(request):
     degree_subjects = Degree_Subject.objects.all()
     schools = Schools.objects.all()
     
-    current_results = request.session['current_results']
+    current_results = request.session['current_results'][:]
     
 #    if 'levels' in request.POST['levels']:
     level_filter = request.POST.getlist('levels')
@@ -73,30 +76,21 @@ def filter(request):
     subject_filter = request.POST.getlist('subjects')
     
     if level_filter:
-        match = False
         for result in current_results:
-            level = Programs.objects.get(name=result['p_name']).degree_level.name
-            if level in level_filter:
-                match = True
-        if not match:
-            request.session['current_results'].remove(result)
+            level = Programs.objects.get(id=result['p_id']).degree_level.name
+            if level not in level_filter:
+                request.session['current_results'].remove(result)
                 
     if school_filter:
-        match = False
         for result in current_results:
-            if result['s_name'].lower() in map(unicode.lower, school_filter): #school_filter.lower():
-                match = True
-        if not match:
-            request.session['current_results'].remove(result)
+            if result['s_name'].lower() not in map(unicode.lower, school_filter): 
+                request.session['current_results'].remove(result)
                 
     if subject_filter:
-        match = False
         for result in current_results:
-            subject = Programs.objects.get(name=result['p_name']).degree_subject.name
-            if subject in subject_filter:
-                match = True
-        if not match:
-            request.session['current_results'].remove(result)
+            subject = Programs.objects.get(id=result['p_id']).degree_subject.name
+            if subject not in subject_filter:
+                request.session['current_results'].remove(result)
     
     programs = request.session['current_results']
     
